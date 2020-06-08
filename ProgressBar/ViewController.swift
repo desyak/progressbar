@@ -48,12 +48,12 @@ class ViewController: UIViewController {
             
         })
         
-        UIView.animate(withDuration: 0.4, delay: 0.4, options: [.autoreverse, .repeat, .curveEaseInOut ], animations: {
+        UIView.animate(withDuration: 0.4, delay: 0.8, options: [.autoreverse, .repeat, .curveEaseInOut ], animations: {
             point2.alpha = 1
             
         })
         
-        UIView.animate(withDuration: 0.4, delay: 0.8, options: [.autoreverse, .repeat, .curveEaseInOut ], animations: {
+        UIView.animate(withDuration: 0.4, delay: 1.6, options: [.autoreverse, .repeat, .curveEaseInOut ], animations: {
             point3.alpha = 1
             
         })
