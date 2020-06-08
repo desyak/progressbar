@@ -9,12 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let point1 = ProgressBar(frame: CGRect.init(
         x: 0, y: 200,
@@ -41,21 +37,19 @@ class ViewController: UIViewController {
         self.view.addSubview(point2)
         self.view.addSubview(point3)
         
+        UIView.animateKeyframes(withDuration: 2.5, delay: 0, options: [ .repeat ], animations: {
+        UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.4) {
+        point1.alpha = 1
         
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.autoreverse, .repeat, .curveEaseInOut  ], animations: {
-            point1.alpha = 1
-            
-            
-        })
-        
-        UIView.animate(withDuration: 0.4, delay: 0.8, options: [.autoreverse, .repeat, .curveEaseInOut ], animations: {
+            }
+        UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.4) {
+        point1.alpha = 0
             point2.alpha = 1
-            
-        })
-        
-        UIView.animate(withDuration: 0.4, delay: 1.6, options: [.autoreverse, .repeat, .curveEaseInOut ], animations: {
-            point3.alpha = 1
-            
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.8, relativeDuration: 0.4) {
+            point2.alpha = 0
+                point3.alpha = 1
+                }
         })
     }
     
